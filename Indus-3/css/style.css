@@ -1,0 +1,277 @@
+  /* theme css file */
+:root{
+  --primary:#234C97;
+}
+html{
+  overflow-x: hidden;
+}
+*{
+  margin: 0;
+  padding: 0;
+  /* overflow-x: hidden; */
+}
+/* h1, h2, h3, h4, h5, p, a,span {
+    overflow: hidden;
+} */
+body, p, .elementor-heading-title, h1,h2,h3,h4,h5,h6{
+  font-family: 'Inter', sans-serif !important;
+}
+body {
+    overflow-x:hidden !important;
+}
+p{
+font-size: 18px;
+font-weight: 400;
+line-height: 1.7em;
+margin-bottom: 20px;
+}
+a{
+  color: var(--primary);
+}
+/* h1,h2,h3,h4,h5,h6, p{
+  color: #18191F !important;
+} */
+@media only screen and (max-width: 1000px) {
+  .indus-container {
+      width: 90%;
+      margin: auto;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .indus-container {
+      width: 900px;
+      margin: auto;
+  }
+}
+/* transparent header in home */
+.home .indus-header{
+  position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    background: transparent !important;
+}
+
+
+/* Css for header */
+.indus-header   .indus-menu-class {
+    text-align: right;
+}
+.indus-header  .indus-menu-class ul li a{
+  /* for underline animation */
+  display: inline-block;
+  position: relative;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.indus-header  .indus-menu-class ul li a:after{
+  content: '';
+ position: absolute;
+ width: 100%;
+ transform: scaleX(0);
+ height: 2px;
+ margin-top: 5px;
+ bottom: 0;
+ left: 0;
+ background-color: var(--primary);
+ transform-origin: bottom right;
+ transition: transform 0.25s ease-out;
+}
+.indus-header  .indus-menu-class ul li a:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* animation over */
+
+/* Css for menu */
+.indus-menu-class ul {
+    list-style: none;
+    display: inline-flex;
+    align-items: center;
+    padding: 10px;
+}
+.indus-menu-class ul li {
+    padding-right: 30px;
+    font-weight: 500;
+    line-height: 1em;
+}
+.indus-menu-class ul li a{
+  color: #18191F;
+  font-size: 15px;
+    padding: 0;
+}
+
+/* buttons */
+.indus-button-medium {
+    background:  var(--primary);
+    border-radius: 6px;
+    padding: 10px 20px !important;
+    transition: 0.3s ease-in-out; // Add the transition
+    border: none;
+    color: #fff;
+    font-family: 'Inter','sans-serif';
+    font-size: 15px;
+    border: none;
+    font-weight: 500;
+}
+.indus-button-medium:hover{
+  -webkit-transform: translateY(-5px) !important;
+transform: translateY(-5px) !important;
+}
+.indus-button-medium a {
+    color: #fff !important;
+    padding: 0 !important;
+}
+.indus-button-medium a:hover:after{
+  display: none;
+}
+button, .elementor-button{
+  transition: 0.3s ease-in-out;
+}
+button:hover, .elementor-button:hover{
+  -webkit-transform: translateY(-5px);
+transform: translateY(-5px);
+}
+
+
+/* contact form css */
+.wpcf7-submit {
+  cursor: pointer;
+  background:  var(--primary);
+  border-radius: 6px;
+  padding: 10px 20px !important;
+  transition: 0.3s ease-in-out;
+  border: none;
+  color: #fff;
+  font-family: 'Inter','sans-serif';
+  font-size: 15px;
+  border: none;
+  font-weight: 500;
+}
+/* .quote-form {
+    width: 600px;
+    margin: 0 auto;
+} */
+.quote-form input {
+    padding: 16px;
+    border-radius: 10px;
+    border: 1px solid #AEAEAE;
+    width: 100%;
+    color: #2D2D2D;
+font-family: 'Inter', sans-serif;
+font-size: 16px;
+font-weight: 400;
+}
+.quote-form textarea {
+  padding: 16px;
+  border-radius: 10px;
+    border: 1px solid #AEAEAE;
+    width: 100%;
+    margin-bottom: 30px;
+    color: #2D2D2D;
+font-family: 'Inter', sans-serif;
+font-size: 16px;
+font-weight: 400;
+}
+.button-row {
+    text-align: center;
+    /* margin: 0 auto; */
+}
+.quote-form  button{
+  cursor: pointer;
+  padding: 15px 45px !important;
+}
+.quote-form .row1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 10px;
+    margin-bottom: 10px;
+}
+
+/* elementor css */
+#gallery-1 img {
+    border: none !important;
+}
+/* single.php css */
+.post-header {
+    display: flex;
+    /* height: 400px; */
+    background: #c2d2ef;
+    justify-content: center;
+    color: #000;
+    padding: 175px 0 275px 0px;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 1.1em;
+}
+.image-div {
+    display: flex;
+    justify-content: center;
+    margin-top: -200px;
+}
+img.post-image {
+    width: 900px;
+    height: auto;
+    overflow: hidden;
+
+}
+h1.post-title {
+    width: 900px;
+    text-align: center;
+    line-height: 1em;
+}
+.content-div {
+    margin: 0 auto;
+    padding: 50px 0;
+
+}
+/* projects archie grid */
+.row-indus {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 40px;
+    padding: 50px 0;
+}
+.post-archive-heading {
+    margin-bottom: 15px;
+    color: #18191F;
+    font-family: "Roboto", Sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+}
+.post-archive-image {
+    margin-bottom: 15px;
+}
+.post-archive-image img {
+    width: 100%;
+    height: auto;
+}
+@media only screen and (max-width: 768px){
+  .post-header{
+    padding: 60px 0 275px 0px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .content-div p {
+      font-size: 16px !important;
+
+  }
+  h1.post-title{
+    font-size: 40px;
+  }
+  .image-div {
+    margin-top: -80px;
+}
+.content-div {
+    padding: 10px 0;
+}
+.post-header{
+  padding: 0 0 100px 0;
+}
+/* projects archie row */
+.row-indus {
+    grid-template-columns: 1fr !important;
+}
+}

@@ -1,0 +1,66 @@
+<!-- links -->
+https://developer.wordpress.org/reference/hooks/customize_register/
+https://wordpress.stackexchange.com/questions/210498/add-post-type-titles-in-customizer-dropdown-list
+https://stackoverflow.com/questions/58805752/missing-page-ids-in-html-source
+https://stackoverflow.com/questions/39658863/custom-post-type-single-page-not-working
+https://developer.wordpress.org/themes/template-files-section/custom-post-type-template-files/#custom-post-type-templates
+https://css-tricks.com/snippets/wordpress/get-featured-image-url/
+
+<!-- resources lins -->
+https://codex.wordpress.org/Shortcode_API
+https://diveinwp.com/how-to-create-menu-shortcode-without-plugin-in-wordpress/
+https://developer.wordpress.org/reference/classes/wp_query/
+https://denverdata.com/blog/how-use-wpquery-display-custom-post-type
+https://github.com/alexander-young/custom-elementor-widget/
+.https://stackoverflow.com/questions/68552278/elementor-displays-the-same-shortcode-twice-only-on-editor
+<!-- loop -->
+<?php
+
+while (have_posts()) {
+  the_post(); ?>
+
+  <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+  <p><?php the_content(); ?></p>
+  <hr>
+
+<?php }
+
+ ?>
+
+
+<!-- customizer old code -->
+<?php
+// text
+  $wp_customize->add_setting('theme_header_setting',array(
+    'default'=>'enter Id of header',
+  ));
+
+  $wp_customize->add_control('theme_header_control',array(
+    'label' => 'Select your header',
+    'section'=>'theme_header_area',
+    'settings'=>'theme_header_setting'
+  ));
+  // description
+  $wp_customize->add_setting('theme_header_description_setting',array(
+    'default'=>'write description',
+  ));
+
+  $wp_customize->add_control('theme_header_description_control',array(
+    'label' => 'add description',
+    'section'=>'theme_header_area',
+    'settings'=>'theme_header_description_setting',
+    'type'=>"textarea"
+  ));
+  //image controls
+  $wp_customize->add_setting('theme_header_image_setting');
+  $wp_customize->add_control(new wp_customize_Image_Control(
+    $wp_customize,
+    "theme_image",
+    array(
+      "label"=>'Upload Image',
+      'settings'=>'theme_header_image_setting',
+      'section'=>'theme_header_area'
+    )
+  ));
+
+  // <!-- customiser code over -->
